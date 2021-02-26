@@ -2,22 +2,16 @@ import React from 'react';
 import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-class Register_process extends React.Component {
+class FindPW_process1 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
                 <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
-                        <Text style={styles.title_font}>Register</Text>
+                        <Text style={styles.title_font}>Find PW</Text>
                     </View>
-
                     <TextInput style={styles.input} placeholder="email" />
-                    <Text style={styles.explain_font} >You can use letters and numbers</Text>      
-                    <TextInput style={styles.input} placeholder="password" />
-                    <TextInput style={styles.input} placeholder="confirm password" />
-                    <Text style={styles.explain_font} >Use 8 or more characters with a mix of letters, numbers & symbols</Text> 
-                    <TextInput style={styles.input} placeholder="1st Name" />
-                    <TextInput style={styles.input} placeholder="Last Name" />  
+                    <Text style={styles.explain_font} >You can use letters and numbers</Text>  
 
                     <View style={styles.birth}>
                         <Picker style={styles.input_birth}>
@@ -44,19 +38,17 @@ class Register_process extends React.Component {
                         <TextInput style={styles.input_phone} placeholder="phone Number" />
                         <Button title="Get number"/>
                     </View>
-                    <Text style={styles.explain_font} >We’ll use your number for account security. It won’t be visible to others.</Text> 
                     <TextInput style={styles.input} placeholder="Vertification Number" />
-                    <Text style={styles.explain_font} >Write vertification number from your phone</Text>
-                    <View style={styles.btn_register}>
-                        <Button title="Register" onPress={()=>this.props.navigation.navigate('Register_complete')}/>
-                    </View>
-                    
 
+                    <View style={styles.btn_search}>
+                        <Button title="Search" onPress={()=>this.props.navigation.navigate('FindPW_process2')}/>
+                    </View>
                 </ImageBackground>
             </View>
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -65,6 +57,7 @@ const styles = StyleSheet.create({
     title: {
         alignItems: "center",
         marginTop: "10%",
+        marginBottom: "30%",
     },
     title_font: {
         fontWeight: "bold",
@@ -80,16 +73,16 @@ const styles = StyleSheet.create({
         marginHorizontal: "20%",
         fontSize: 12,
     },
+    input_birth: {
+        width: "30%",
+        backgroundColor: "white",
+        marginRight: "5%",
+    },
     birth: {
         marginTop: "5%",
         flexDirection: "row",
         marginHorizontal: "20%",
         height: "5%",
-    },
-    input_birth: {
-        width: "30%",
-        backgroundColor: "white",
-        marginRight: "5%",
     },
     phone: {
         marginTop: "3%",
@@ -102,10 +95,11 @@ const styles = StyleSheet.create({
         marginRight: "10%",
         width: "60%"
     },
-    btn_register: {
+    btn_search: {
         marginHorizontal: "20%",
-        marginTop: "10%",
+        marginTop: "20%",
     },
 })
 
-export default Register_process;
+
+export default FindPW_process1;

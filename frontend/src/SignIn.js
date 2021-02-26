@@ -20,13 +20,13 @@ class SignIn extends React.Component {
                         <Button title="Sign in" onPress={()=>this.props.navigation.navigate('Details')} />
                     </View>
                     <View style={styles.other_btns}>
-                        <TouchableOpacity style={styles.other_btn} onPress={()=>this.props.navigation.navigate('Register')} >
+                        <TouchableOpacity style={styles.other_btn} onPress={()=>this.props.navigation.navigate('Agreement')} >
                             <Text style={{color: "#2196F3"}}>Register</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.other_btn} >
+                        <TouchableOpacity style={styles.other_btn} onPress={()=>this.props.navigation.navigate('FindID_process')} >
                             <Text style={{color: "#2196F3"}}>find ID</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.other_btn} >
+                        <TouchableOpacity style={styles.other_btn} onPress={()=>this.props.navigation.navigate('FindPW_process1')}>
                             <Text style={{color: "#2196F3"}}>find PW</Text>
                         </TouchableOpacity>
                     </View>
