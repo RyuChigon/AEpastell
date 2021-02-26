@@ -1,36 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, Image, Button } from 'react-native';
+import { View, Text, Button } from 'react-native';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <ImageBackground style={{ width: "100%", height: "100%" }} source={require("./images/MAIN/Main_background1.jpg")} resizeMode="cover" >
-        <Image style={styles.title} source={require("./images/PASTELL/Pastell_logo.png")} resizeMode="contain" />
-        <Image style={styles.ein} source={require("./images/PASTELL/Pastell_logo_ein.png")} resizeMode="contain" />
-        <View style={styles.btn_welcome}>
-          <Button title="Welcome !" />
-        </View>
-      </ImageBackground>
-    </View>
-  );
-}
+import Initial from './src/Initial.js';
+import SignIn from './src/SignIn.js';
+import Agreement from './src/Register/Agreement.js';
+import Register_process from './src/Register/Register_process.js';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+
+
+const AppNavigator = createSwitchNavigator(
+  {
+    Initial: Initial,
+    SignIn: SignIn,
+    Register: Agreement,
+    Register_process: Register_process,
   },
-  title: {
-    width: "100%",
-    height: "20%",
-    marginTop: "5%",
-  },
-  ein: {
-    width: "100%",
-    height: "30%",
-    marginTop: "10%",
-  },
-  btn_welcome: {
-    marginHorizontal: "20%",
-  },
-});
+  {
+    initialRouteName: 'Initial',
+  }
+);
+
+export default createAppContainer(AppNavigator);
