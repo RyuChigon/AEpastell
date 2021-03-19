@@ -17,7 +17,7 @@ class SignIn extends React.Component {
                         </Text>
                     </View>
                     <View style={styles.signIn}>
-                        <Button title="Sign in" onPress={()=>this.props.navigation.navigate('Details')} />
+                        <Button title="Sign in" onPress={()=>this.props.navigation.navigate('MainScreen')} />
                     </View>
                     <View style={styles.other_btns}>
                         <TouchableOpacity style={styles.other_btn} onPress={()=>this.props.navigation.navigate('Agreement')} >
