@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {View,Keyboard, TextInput , StyleSheet, KeyboardAvoidingView,ScrollView} from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 class Chat_keyboard extends Component {
   

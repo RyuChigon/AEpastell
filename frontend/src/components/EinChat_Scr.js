@@ -1,10 +1,9 @@
-import { Row } from 'native-base';
 import React, {Component} from 'react';
 import { withNavigation, createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import Keyboard from './Keyboard';
 import {source,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
-class Ein_Chatting extends Component {
+class EinChat_Scr extends Component {
   render() {
     return (
       <View style = {styles.Container}>
@@ -45,7 +44,7 @@ class Ein_Chatting extends Component {
 };
 
 
-export default withNavigation(Ein_Chatting);
+export default withNavigation(EinChat_Scr);
 
 const styles = StyleSheet.create({
     Container:{

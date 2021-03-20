@@ -3,7 +3,6 @@ import Einstein from './Einstein';
 import Newton from './Newton';
 import YiSunSin from './YiSunSin';
 import GwanSun from './GwanSun';
-import { Row } from 'native-base';
 import React, {Component} from 'react';
 import { withNavigation, createAppContainer } from 'react-navigation';
 import {source,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';

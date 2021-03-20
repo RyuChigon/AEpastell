@@ -1,7 +1,5 @@
-import { Row } from 'native-base';
 import React, {Component} from 'react';
 import {source,Overlay,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
-import { Line } from 'rc-progress';
 import Main from './MainScreen';
 
 import { createAppContainer, withNavigation } from 'react-navigation';
