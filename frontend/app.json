@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "ios.infoPlist": ["NSPhotoLibraryUsageDescription", "NSCameraUsageDescription", "NSCameraUsageDescription", "NSMicrophoneUsageDescription"],
+    "android.permissions": ["CAMERA", "MEDIA_LIBRARY", "WRITE_EXTERNAL_STORAGE"]
   }
 }

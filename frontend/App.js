@@ -1,36 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer, StackActions} from '@react-navigation/native';
+import {TouchableOpacity, Button, View} from 'react-native';
+import List from './images/ICON/Icon_list.svg';
+import LogoTitle from './components/customMenu';
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, Image, Button } from 'react-native';
+import Setting from './screens/settingScreen';
+import Profile from './screens/profileScreen';
+import Menu from './screens/menuScreen';
+import Howto from './screens/howtoScreen';
+import Contact from './screens/aboutScreen';
+import Shop from './screens/shopScreen';
+
+const settingStack = createStackNavigator(); 
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground style={{ width: "100%", height: "100%" }} source={require("./images/MAIN/Main_background1.jpg")} resizeMode="cover" >
-        <Image style={styles.title} source={require("./images/PASTELL/Pastell_logo.png")} resizeMode="contain" />
-        <Image style={styles.ein} source={require("./images/PASTELL/Pastell_logo_ein.png")} resizeMode="contain" />
-        <View style={styles.btn_welcome}>
-          <Button title="Welcome !" />
-        </View>
-      </ImageBackground>
-    </View>
+    <>
+    <NavigationContainer>
+      <settingStack.Navigator>
+        <settingStack.Screen name="Setting" component={Setting}/>
+        <settingStack.Screen name="Change Profile" component={Profile}/>
+        <settingStack.Screen name="Menu" component={Menu}/>
+        <settingStack.Screen name="How to Use" component={Howto}/>
+        <settingStack.Screen name="Contact Us" component={Contact}/>
+        <settingStack.Screen name="Shop" component={Shop}/>
+      </settingStack.Navigator>
+    </NavigationContainer>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  title: {
-    width: "100%",
-    height: "20%",
-    marginTop: "5%",
-  },
-  ein: {
-    width: "100%",
-    height: "30%",
-    marginTop: "10%",
-  },
-  btn_welcome: {
-    marginHorizontal: "20%",
-  },
-});
