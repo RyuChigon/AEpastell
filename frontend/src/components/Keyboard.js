@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View,Keyboard, TextInput , StyleSheet, KeyboardAvoidingView,ScrollView} from 'react-native';
+import {View,Keyboard, TextInput, Text, StyleSheet, KeyboardAvoidingView, ScrollView, Button, TouchableOpacity} from 'react-native';
 
 class Chat_keyboard extends Component {
   
@@ -29,40 +29,47 @@ class Chat_keyboard extends Component {
   render() {
     return (
       <KeyboardAvoidingView
-      style = {{backgroundColor:'#4c69a5'}}
       resetScrollToCoords={{x:0, y:0}}
       contentContainerStyle ={s.Container}
-      
       ScrollEnabled={false}>
-        <ScrollView style = {{flex:1}}>
-        <View>
-        
-        <TextInput style={s.input} placeholder='                              Enter your message                              ' onSubmitEditing={Keyboard.dismiss}/>
+        <View style={{backgroundColor: "white"}}>
+          <View style={{flexDirection: "row"}} >
+            <View style={{flex: 9}} >
+              <TextInput style={s.input} placeholder='Enter your message' onSubmitEditing={Keyboard.dismiss}/>
+            </View>
+            <View style={{flex: 1}}>
+              <TouchableOpacity style={s.btn} >  
+                <Text>↑</Text>
+              </TouchableOpacity>  
+            </View>
+          </View>
         </View>
-        </ScrollView>
+
       </KeyboardAvoidingView>
     )
   };
 };
 
 const s = StyleSheet.create({
-    Container:{
-      flex:1
-    },
-    input:{
-    bottom:"10%",
-    top:"0%",
-    //width:"100%",
-    padding: 10,
-    borderWidth: 0.1,
-    borderRadius: 20,
-    backgroundColor: "#fff",
-    //marginTop: "1000%",
-    //flexDirection:'column',
-    position: 'relative',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
-   }
+  Container:{
+    flex:1
+  },
+  input:{
+    paddingVertical: "2%",
+    backgroundColor: "white",
+    paddingLeft: "2%",
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: "#bbbbbb",
+    margin: "1%"
+  },
+  btn: {
+    flex: 1,
+    backgroundColor: "#0693E3",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 100,
+  },
 });
 
 export default Chat_keyboard;

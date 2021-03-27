@@ -10,9 +10,7 @@ class EinChat_real extends Component {
       <>
       <EinChat_Scr/>
         <View style = {styles.Overlay} >
-          <View style = {styles.Container}>
             <Chat_keyboard/>
-          </View>
         </View>
       </>
 
@@ -26,15 +24,10 @@ const styles = StyleSheet.create({
   Overlay:{
     position: 'absolute',
     justifyContent: 'flex-end',
-    alignItems: 'center',
-    //top: "40%",
     width: "100%",
     height: "100%",
-    backgroundColor: 'rgba(0,0,0,0)'
   },
   Container:{
-    //marginTop: "100%",
-    //flex:1,
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',

@@ -17,7 +17,7 @@ import MainScreen from './src/components/MainScreen';
 import MainScreen_2 from './src/components/MainScreen_2';
 import EinChat_real from './src/components/EinChat_real';
 
-const AppNavigator = createSwitchNavigator(
+const AppNavigator = createStackNavigator(
   {
     Initial: Initial,
     SignIn: SignIn,
