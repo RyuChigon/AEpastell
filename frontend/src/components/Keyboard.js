@@ -3,29 +3,30 @@ import {View,Keyboard, TextInput, Text, StyleSheet, KeyboardAvoidingView, Scroll
 
 class Chat_keyboard extends Component {
   
-  componentDidMount() {
-    this.keyboardDidShowListener = Keyboard.addListener(
-      'keyboardDidShow',
-      this._keyboardDidShow,
-    );
-    this.keyboardDidHideListener = Keyboard.addListener(
-      'keyboardDidHide',
-      this._keyboardDidHide,
-    );
-  };
+  constructor(props) {
+    super(props);
+    this.state = {text: ''};
+  }
 
-  componentWillUnmount() {
-    this.keyboardDidShowListener.remove();
-    this.keyboardDidHideListener.remove();
-  };
-  /*
-  _keyboardDidShow() {
-    alert('Keyboard Shown');
+  alertQ = () => {
+    var t = this.state.text;
+    alert(t);
   }
-  _keyboardDidHide() {
-    alert('Keyboard Hidden');
+  
+  answer = () => {
+    fetch("http://localhost:4000/conv", {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        text: this.state.text,
+      }),
+    })
+    .then(res => res.text())
+    .then(ans => alert(ans))
   }
-*/
+
   render() {
     return (
       <KeyboardAvoidingView
@@ -35,10 +36,10 @@ class Chat_keyboard extends Component {
         <View style={{backgroundColor: "white"}}>
           <View style={{flexDirection: "row"}} >
             <View style={{flex: 9}} >
-              <TextInput style={s.input} placeholder='Enter your message' onSubmitEditing={Keyboard.dismiss}/>
+              <TextInput style={s.input} placeholder='Enter your message' onChangeText={(text) => this.setState({text})} />
             </View>
             <View style={{flex: 1}}>
-              <TouchableOpacity style={s.btn} >  
+              <TouchableOpacity style={s.btn} onPress={this.answer} >  
                 <Text>↑</Text>
               </TouchableOpacity>  
             </View>

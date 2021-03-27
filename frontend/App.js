@@ -34,7 +34,7 @@ const AppNavigator = createStackNavigator(
     EinChat_real : EinChat_real,
   },
   {
-    initialRouteName: 'Initial',
+    initialRouteName: 'EinChat_real',
   }
 );
 

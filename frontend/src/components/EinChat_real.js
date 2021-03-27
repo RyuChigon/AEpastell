@@ -10,7 +10,7 @@ class EinChat_real extends Component {
       <>
       <EinChat_Scr/>
         <View style = {styles.Overlay} >
-            <Chat_keyboard/>
+          <Chat_keyboard/>
         </View>
       </>
 
