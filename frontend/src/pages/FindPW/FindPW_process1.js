@@ -1,15 +1,18 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput } from 'react-native';
+import { View, Text, Button, StyleSheet, ImageBackground, TextInput } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-class FindID_process extends React.Component {
+class FindPW_process1 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
-                        <Text style={styles.title_font}>Find ID</Text>
+                        <Text style={styles.title_font}>Find PW</Text>
                     </View>
+                    <TextInput style={styles.input} placeholder="email" />
+                    <Text style={styles.explain_font} >You can use letters and numbers</Text>  
+
                     <View style={styles.birth}>
                         <Picker style={styles.input_birth}>
                             <Picker.Item label="Month" value="Month" />
@@ -36,16 +39,16 @@ class FindID_process extends React.Component {
                         <Button title="Get number"/>
                     </View>
                     <TextInput style={styles.input} placeholder="Vertification Number" />
-                    <View style={styles.btn_search}>
-                        <Button title="Search" onPress={()=>this.props.navigation.navigate('FindID_complete')}/>
-                    </View>
-                    
 
+                    <View style={styles.btn_search}>
+                        <Button title="Search" onPress={()=>this.props.navigation.navigate('FindPW_process2')}/>
+                    </View>
                 </ImageBackground>
             </View>
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -54,6 +57,7 @@ const styles = StyleSheet.create({
     title: {
         alignItems: "center",
         marginTop: "10%",
+        marginBottom: "30%",
     },
     title_font: {
         fontWeight: "bold",
@@ -69,16 +73,16 @@ const styles = StyleSheet.create({
         marginHorizontal: "20%",
         fontSize: 12,
     },
-    birth: {
-        marginTop: "30%",
-        flexDirection: "row",
-        marginHorizontal: "20%",
-        height: "5%",
-    },
     input_birth: {
         width: "30%",
         backgroundColor: "white",
         marginRight: "5%",
+    },
+    birth: {
+        marginTop: "5%",
+        flexDirection: "row",
+        marginHorizontal: "20%",
+        height: "5%",
     },
     phone: {
         marginTop: "3%",
@@ -97,4 +101,5 @@ const styles = StyleSheet.create({
     },
 })
 
-export default FindID_process;
+
+export default FindPW_process1;

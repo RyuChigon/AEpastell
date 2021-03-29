@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ImageBackground, Image } from 'react-native';
+import { View, Text, Button, StyleSheet, ImageBackground} from 'react-native';
 
 class Agreement extends React.Component {
     render() {
         return (
             <View style={styles.container} >
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
                         <Text style={styles.title_font}>Privacy Police</Text>
                     </View>

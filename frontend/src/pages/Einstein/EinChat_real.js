@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { withNavigation, createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import Chat_keyboard from './Keyboard';
-import EinChat_Scr from './EinChat_Scr';
-import {KeyboazIndex,Dimensions,source,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
+import Chat_keyboard from '../../components/Keyboard';
+import EinChat_Scr from '../../components/EinChat_Scr';
+import { StyleSheet, View } from 'react-native';
+
 class EinChat_real extends Component {
   render() {
     return (
@@ -15,7 +15,7 @@ class EinChat_real extends Component {
       </>
 
     );
-};
+  };
 };
 
 export default withNavigation(EinChat_real);

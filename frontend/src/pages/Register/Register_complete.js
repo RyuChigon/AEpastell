@@ -1,19 +1,17 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput } from 'react-native';
 
-
-class FindID_complete extends React.Component {
+class Register_complete extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
-                        <Text style={styles.title_font}>Find ID</Text>
+                        <Text style={styles.title_font}>Register</Text>
                     </View>
-                    <View style={styles.result} >
-                        <Text style={styles.explain_font} >Your id is 'aieducation@gmail.com'</Text>
+                    <View style={styles.content}>
+                        <Text style={styles.content_font}>Sign up is complete !</Text>
                     </View>
-
                     <View style={styles.btn_goBack}>
                         <Button title="Go Back" onPress={()=>this.props.navigation.navigate('SignIn')}/>
                     </View>
@@ -21,6 +19,7 @@ class FindID_complete extends React.Component {
             </View>
         );
     }
+
 }
 
 const styles = StyleSheet.create({
@@ -35,18 +34,18 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 30,
     },
-    result: {
+    content: {
         alignItems: "center",
         marginTop: "40%",
     },
-    explain_font: {
-        marginHorizontal: "20%",
-        fontSize: 30,
+    content_font: {
+        alignItems: "center",
+        fontSize: 40,
     },
     btn_goBack: {
+        marginTop: "50%",
         marginHorizontal: "20%",
-        marginTop: "30%",
     },
 })
 
-export default FindID_complete;
+export default Register_complete;

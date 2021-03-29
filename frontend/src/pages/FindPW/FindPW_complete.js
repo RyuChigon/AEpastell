@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+import { View, Text, Button, StyleSheet, ImageBackground} from 'react-native';
 
 class FindPW_complete extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
                         <Text style={styles.title_font}>Find PW</Text>
                     </View>

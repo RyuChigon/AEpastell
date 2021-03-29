@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import {source,Overlay,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import Main from './MainScreen';
+import { withNavigation } from 'react-navigation';
 
-import { createAppContainer, withNavigation } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-
-
- class MainScreen_2 extends Component {
+class MainScreen_2 extends Component {
   render() {
     return (
       <>
@@ -16,7 +13,7 @@ import { createStackNavigator } from 'react-navigation-stack';
             <Text style = {styles.Text_1}>Albert Einstein</Text>
             <Text style = {styles.Text_2}>Theoretical Physicist</Text>
             <Text style = {styles.Text_3}>intimacy: 1 Level 0</Text>
-            <Image style = {styles.eins} source={require("../../images/EIN/Char_AlbertEinstein.png")} resizeMode="contain"/>
+            <Image style = {styles.eins} source={require("../../../images/EIN/Char_AlbertEinstein.png")} resizeMode="contain"/>
             <Button style = {styles.button}
               title = "Start Chatting!"
               onPress = {()=>{this.props.navigation.navigate("EinChat_real")}}
@@ -34,14 +31,11 @@ const styles = StyleSheet.create({
     position: 'absolute',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    //top: "40%",
     width: "100%",
     height: "100%",
     backgroundColor: 'rgba(0,0,0,0.5)'
   },
   Texts:{
-    //left: 25,
-    //marginTop: "10%",
     position: 'absolute',
     flexDirection: 'column',
     justifyContent: 'center',

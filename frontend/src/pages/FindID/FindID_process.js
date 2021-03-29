@@ -1,49 +1,15 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput, Alert } from 'react-native';
+import { View, Text, Button, StyleSheet, ImageBackground, Image, TextInput } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-class Register_process extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            password: '',
-            name: '',
-            birth: '',
-            phone: '',
-        };
-
-        this.handleEmail = this.handleEmail.bind(this);
-    }
-
-    handleEmail(e) { this.setState({email: e.target.value}); };
-    handlePW(e) { this.setState({password: e.target.value}); };
-    handleName(e) { this.setState({name: e.target.value}); };
-    handleBirth(e) { this.setState({birth: e.target.value}); };
-    handlePhone(e) { this.setState({phone: e.target.value}); };
-
-    componentDidMount() {
-        fetch('http://localhost:4000/api')
-            .then(res=>res.json())
-            .then(data=>this.setState({name:data.name}));
-    }
-
+class FindID_process extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
                     <View style={styles.title} >
-                        <Text style={styles.title_font}>Register</Text>
+                        <Text style={styles.title_font}>Find ID</Text>
                     </View>
-                    <TextInput style={styles.input} onChange={this.handleEmail} placeholder="email" />
-                    <Text style={styles.explain_font} >You can use letters and numbers</Text>      
-                    <TextInput style={styles.input} onChange={this.handlePW} placeholder="password" />
-                    <TextInput style={styles.input} placeholder="confirm password" />
-                    <Text style={styles.explain_font} >Use 8 or more characters with a mix of letters, numbers & symbols</Text> 
-                    <TextInput style={styles.input} onChange={this.handleName} placeholder="1st Name" />
-                    <TextInput style={styles.input} placeholder="Last Name" />  
-
                     <View style={styles.birth}>
                         <Picker style={styles.input_birth}>
                             <Picker.Item label="Month" value="Month" />
@@ -61,20 +27,20 @@ class Register_process extends React.Component {
                             <Picker.Item label="12" value="December" />
                         </Picker> 
                         <TextInput style={styles.input_birth} placeholder="Day" />  
-                        <TextInput style={styles.input_birth} onChange={this.handleBirth} placeholder="Year" />  
+                        <TextInput style={styles.input_birth} placeholder="Year" />  
                     </View>
                     <Text style={styles.explain_font} >Your birthday</Text>
 
                     <View style={styles.phone}>
-                        <TextInput style={styles.input_phone} onChange={this.handlePhone} placeholder="phone Number" />
+                        <TextInput style={styles.input_phone} placeholder="phone Number" />
                         <Button title="Get number"/>
                     </View>
-                    <Text style={styles.explain_font} >We’ll use your number for account security. It won’t be visible to others.</Text> 
                     <TextInput style={styles.input} placeholder="Vertification Number" />
-                    <Text style={styles.explain_font} >Write vertification number from your phone</Text>
-                    <View style={styles.btn_register}>
-                        <Button title="Register" onPress={()=>this.props.navigation.navigate('SignIn')}/>
+                    <View style={styles.btn_search}>
+                        <Button title="Search" onPress={()=>this.props.navigation.navigate('FindID_complete')}/>
                     </View>
+                    
+
                 </ImageBackground>
             </View>
         );
@@ -104,7 +70,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     birth: {
-        marginTop: "5%",
+        marginTop: "30%",
         flexDirection: "row",
         marginHorizontal: "20%",
         height: "5%",
@@ -125,10 +91,10 @@ const styles = StyleSheet.create({
         marginRight: "10%",
         width: "60%"
     },
-    btn_register: {
+    btn_search: {
         marginHorizontal: "20%",
-        marginTop: "10%",
+        marginTop: "20%",
     },
 })
 
-export default Register_process;
+export default FindID_process;

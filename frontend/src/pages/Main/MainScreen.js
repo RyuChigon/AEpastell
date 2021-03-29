@@ -1,18 +1,18 @@
-import Header from './Header';
-import Einstein from './Einstein';
-import Newton from './Newton';
-import YiSunSin from './YiSunSin';
-import GwanSun from './GwanSun';
+import Header from '../../components/Header';
+import Einstein from '../../components/Einstein';
+import Newton from '../../components/Newton';
+import YiSunSin from '../../components/YiSunSin';
+import GwanSun from '../../components/GwanSun';
 import React, {Component} from 'react';
-import { withNavigation, createAppContainer } from 'react-navigation';
-import {source,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platform, Text, View, ImageBackground, Image, Button, TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
+import { ScrollView, StyleSheet, Text, View, ImageBackground } from 'react-native';
 
 
 class MainScreen extends Component {
   render() {
     return (
       <View style = {styles.Container}>
-        <ImageBackground style= {{width: "100%", height: "100%"}} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover">
+        <ImageBackground style= {{width: "100%", height: "100%"}} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover">
         <Header/>
           <View style = {styles.Texts}>
             <Text style = {[styles.Texts_1]}> Who do you want to talk to? </Text>

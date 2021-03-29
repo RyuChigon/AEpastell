@@ -6,8 +6,8 @@ class SignIn extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
-                    <Image style={styles.title} source={require("../images/PASTELL/Pastell_logo.png")} resizeMode="contain" />
+                <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../images/MAIN/Main_background1.jpg")} resizeMode="cover" >
+                    <Image style={styles.title} source={require("../../images/PASTELL/Pastell_logo.png")} resizeMode="contain" />
                     <TextInput style={styles.input_email} placeholder="email" />
                     <TextInput style={styles.input_pw} placeholder="password" />
                     <View style={styles.checkbox}>
