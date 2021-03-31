@@ -1,6 +1,6 @@
 ### Downloading KaistAE
 ```
-git clone 
+git clone https://github.com/alstlraks/KaistAE.git
 cd KaistAE
 ```
 ### Running the app in the localhost
