@@ -6,16 +6,12 @@ import {source,HorizontalScrollView, AppRegistry,ScrollView, StyleSheet, Platfor
 const YiSunSin = ({navigation}) => (
     <View style = {styles.Container}>
 
-      <TouchableOpacity style = {styles.Characters_2_2}
-        onPress = {()=>navigation.navigate("MainScreen_2")}>
+      <TouchableOpacity style = {styles.Characters_2_2}>
         <Image style={styles.YiSunSin} source={require("../../images/YSS/Char_YiSunSin.png")} resizeMode="contain" />
       </TouchableOpacity>
 
       <View style = {styles.Texts_name_2_1}>
-        <Button
-          title = "YiSunSin"
-          onPress = {()=>navigation.navigate("MainScreen_2")}>
-        </Button>
+        <Button title = "YiSunSin" />
       </View>
     </View>
 );

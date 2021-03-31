@@ -15,7 +15,14 @@ import FindPW_process2 from './src/pages/FindPW/FindPW_process2.js';
 import FindPW_complete from './src/pages/FindPW/FindPW_complete.js';
 import MainScreen from './src/pages//Main/MainScreen';
 import MainScreen_2 from './src/pages/Main/MainScreen_2';
-import EinChat_real from './src/pages/Einstein/EinChat_real';
+import EinStein_Chat from './src/pages/Einstein/EinStein_Chat';
+import AboutScreen from './src/pages/Settings/AboutScreen';
+import HowtoScreen from './src/pages/Settings/HowtoScreen';
+import MenuScreen from './src/pages/Settings/MenuScreen';
+import ProfileScreen from './src/pages/Settings/ProfileScreen';
+import SettingScreen from './src/pages/Settings/SettingScreen';
+import ShopScreen from './src/pages/Shop/ShopScreen';
+import Header from './src/components/Header';
 
 const AppNavigator = createStackNavigator(
   {
@@ -31,11 +38,20 @@ const AppNavigator = createStackNavigator(
     FindPW_complete: FindPW_complete,
     MainScreen : MainScreen,
     MainScreen_2 : MainScreen_2,
-    EinChat_real : EinChat_real,
+    EinStein_Chat : EinStein_Chat,
+    AboutScreen: AboutScreen,
+    HowtoScreen: HowtoScreen,
+    MenuScreen: MenuScreen,
+    ProfileScreen: ProfileScreen,
+    SettingScreen: SettingScreen,
+    ShopScreen: ShopScreen,
   },
   {
+    defaultNavigationOptions: {
+      header: null,
+    },
     initialRouteName: 'Initial',
-  }
+  },
 );
 
 export default createAppContainer(AppNavigator);

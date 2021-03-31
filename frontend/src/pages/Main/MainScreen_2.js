@@ -16,7 +16,7 @@ class MainScreen_2 extends Component {
             <Image style = {styles.eins} source={require("../../../images/EIN/Char_AlbertEinstein.png")} resizeMode="contain"/>
             <Button style = {styles.button}
               title = "Start Chatting!"
-              onPress = {()=>{this.props.navigation.navigate("EinChat_real")}}
+              onPress = {()=>{this.props.navigation.navigate("EinStein_Chat")}}
               />
           </View>
         </View>

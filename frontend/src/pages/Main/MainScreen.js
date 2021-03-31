@@ -13,7 +13,7 @@ class MainScreen extends Component {
     return (
       <View style = {styles.Container}>
         <ImageBackground style= {{width: "100%", height: "100%"}} source={require("../../../images/MAIN/Main_background1.jpg")} resizeMode="cover">
-        <Header/>
+        <Header navigation={this.props.navigation} />
           <View style = {styles.Texts}>
             <Text style = {[styles.Texts_1]}> Who do you want to talk to? </Text>
             <Text style = {[styles.Texts_2]}> Click the character </Text>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   Char_Container:{
     flex:1,
-    flexDirection:  'row',
+    flexDirection: 'row',
     width:"700%",
     //backgroundColor: 'white',
     justifyContent: 'space-evenly'
