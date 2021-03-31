@@ -5,8 +5,14 @@ cd KaistAE
 ```
 ### Running the app in the localhost
 
+Open up backend
 ```
-cd frontend
+cd backend
+nodemon app.js
+```
+Open up frontend 
+```
+cd ../frontend
 npm install expo
 npm start
 ```
